@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "mandgda": {
+      "previewOrg": "waringme",
+      "previewSite": "mandgda",
+      "contentHostUrl": "https://content.da.live/waringme/mandgda/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

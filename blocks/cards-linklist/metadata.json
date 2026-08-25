@@ -1,0 +1,37 @@
+{
+  "variantName": "cards-linklist",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-25T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.mandg.com/retirement-later-life-planning/accessing-your-pension-savings",
+    "originPage": "pension information page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "link-list",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "linked heading per row",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "vertical lists of navigational links with arrow affordances",
+      "quick-links / 'find out more' index sections"
+    ],
+    "notSuitableFor": [
+      "card grids with images",
+      "cards needing descriptive body text"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/retirement-later-life-planning/accessing-your-pension-savings"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-25T00:00:00.000Z"
+  }
+}

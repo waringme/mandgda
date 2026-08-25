@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.mandg.com/retirement-later-life-planning/accessing-your-pension-savings",
+  "path": "retirement-later-life-planning/accessing-your-pension-savings",
+  "timestamp": "2026-08-25T14:05:55.958Z",
+  "title": "Accessing your Pension Savings | Retirement Planning | M&G",
+  "template": "pension-info-page",
+  "blocks": [
+    "hero-coral",
+    "tabs-burgundy",
+    "cards-linklist",
+    "cards-linklist",
+    "cards-tools",
+    "hero-dark",
+    "cards-info"
+  ]
+}

@@ -1,0 +1,47 @@
+.hero-coral-container .hero-coral-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-coral {
+  position: relative;
+  padding: 40px 24px;
+  min-height: 300px;
+}
+
+.hero-coral h1,
+.hero-coral h2,
+.hero-coral h3,
+.hero-coral h4,
+.hero-coral h5,
+.hero-coral h6,
+.hero-coral p {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--background-color);
+}
+
+.hero-coral.no-image * {
+  color: var(--text-color);
+}
+
+.hero-coral picture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.hero-coral img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (width >= 900px) {
+  .hero-coral {
+    padding: 40px 32px;
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "pension-info-page",
+      "urls": [
+        "https://www.mandg.com/retirement-later-life-planning/accessing-your-pension-savings"
+      ],
+      "coverageGaps": [],
+      "description": "Retirement/pension informational page with hero teaser, intro content, tabbed pension options, quick links, calculator/tool cards, expert help CTA, and more-information teaser cards.",
+      "blocks": [
+        {
+          "name": "hero-coral",
+          "instances": [
+            "div.herobannerteaser.teaser.coral"
+          ]
+        },
+        {
+          "name": "tabs-burgundy",
+          "instances": [
+            "div.tabs.panelcontainer.burgundy"
+          ]
+        },
+        {
+          "name": "cards-linklist",
+          "instances": [
+            "div.quicklinks"
+          ]
+        },
+        {
+          "name": "cards-tools",
+          "instances": [
+            ".cmp-experiencefragment--additonal-support-tools .teasercardscontainer"
+          ]
+        },
+        {
+          "name": "hero-dark",
+          "instances": [
+            "div.herobannerteaser.teaser.dark"
+          ]
+        },
+        {
+          "name": "cards-info",
+          "instances": [
+            "div.bg-theme-3.full-bleed .teasercardscontainer"
+          ]
+        },
+        {
+          "name": "section-more-information",
+          "instances": [
+            "div.bg-theme-3.full-bleed"
+          ],
+          "section": "grey"
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero (coral)",
+          "selector": "div.herobannerteaser.teaser.coral",
+          "style": null,
+          "blocks": [
+            "hero-coral"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Intro - ways to access your pension",
+          "selector": "div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Your pension options (tabs)",
+          "selector": "div.tabs.panelcontainer.burgundy",
+          "style": null,
+          "blocks": [
+            "tabs-burgundy"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Find out more about your options (quick links)",
+          "selector": "div.quicklinks",
+          "style": null,
+          "blocks": [
+            "cards-linklist"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Need more help (calculator/tool cards)",
+          "selector": ".cmp-experiencefragment--additonal-support-tools .teasercardscontainer",
+          "style": null,
+          "blocks": [
+            "cards-tools"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Get expert help (dark hero)",
+          "selector": "div.herobannerteaser.teaser.dark",
+          "style": null,
+          "blocks": [
+            "hero-dark"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "More information (teaser cards)",
+          "selector": "div.bg-theme-3.full-bleed",
+          "style": "grey",
+          "blocks": [
+            "cards-info"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}
