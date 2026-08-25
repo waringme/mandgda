@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <comment>FileVault package</comment>
+  <entry key="name">mandg-dam-images</entry>
+  <entry key="version">1.0</entry>
+  <entry key="group">mandg</entry>
+  <entry key="description">M&amp;G images imported to /content/dam/mandg/da</entry>
+  <entry key="packageType">content</entry>
+</properties>
