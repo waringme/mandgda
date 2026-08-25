@@ -1,20 +1,108 @@
+/* M&G footer — dark burgundy top (logo + link columns) + light legal bar */
+
 footer {
-  background-color: var(--light-color);
   font-size: var(--body-font-size-xs);
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer .footer {
+  background-color: var(--mandg-burgundy);
+  color: #fff;
+}
+
+footer .footer a:any-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .footer a:hover {
+  text-decoration: underline;
 }
 
 footer .footer p {
   margin: 0;
 }
 
+/* Section 1: logo */
+footer .footer > div:nth-child(1) {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 0;
+}
+
+footer .footer > div:nth-child(1) img {
+  width: 56px;
+  height: 56px;
+}
+
+/* Section 2: link columns */
+footer .footer > div:nth-child(2) {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 24px 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+footer .footer > div:nth-child(2) > div > p:first-child {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+footer .footer > div:nth-child(2) ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer > div:nth-child(2) li {
+  padding: 6px 0;
+  font-size: 15px;
+}
+
+/* Section 3: legal bar (light) */
+footer .footer > div:nth-child(3) {
+  background-color: var(--mandg-grey);
+  color: var(--text-color);
+  margin: 0 calc(50% - 50vw);
+  padding: 24px calc(50vw - 600px + 24px);
+}
+
+footer .footer > div:nth-child(3) ul {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+footer .footer > div:nth-child(3) li {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+footer .footer > div:nth-child(3) a:any-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+footer .footer > div:nth-child(3) a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+footer .footer > div:nth-child(3) p {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #555;
+}
+
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer > div:nth-child(2) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
   }
 }
