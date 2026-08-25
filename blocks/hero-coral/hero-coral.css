@@ -1,47 +1,117 @@
+/* Block: hero-coral — full-bleed coral text panel beside a lifestyle photo.
+   Source: mandg.com coral hero teaser. Values from source computed styles. */
+
+/* full-bleed: cancel the section content-width constraint */
 .hero-coral-container .hero-coral-wrapper {
   max-width: unset;
   padding: 0;
 }
 
+/* Decorated DOM: .hero-coral > div(row) > div(cell)
+   row 1 = image (picture > img), row 2 = text (h1 + p) */
+
 .hero-coral {
-  position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
-.hero-coral h1,
-.hero-coral h2,
-.hero-coral h3,
-.hero-coral h4,
-.hero-coral h5,
-.hero-coral h6,
-.hero-coral p {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+.hero-coral > div {
+  margin: 0;
 }
 
-.hero-coral.no-image * {
-  color: var(--text-color);
+.hero-coral > div > div {
+  margin: 0;
 }
 
+/* image row */
+.hero-coral > div:first-child {
+  order: 1;
+}
+
+.hero-coral > div:first-child > div,
 .hero-coral picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
-}
-
-.hero-coral img {
-  object-fit: cover;
+  display: block;
   width: 100%;
   height: 100%;
 }
 
+.hero-coral img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* coral text panel */
+/* stylelint-disable-next-line no-descending-specificity */
+.hero-coral > div:last-child {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding: 32px;
+  background-color: #d13c15;
+}
+
+.hero-coral > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hero-coral h1 {
+  margin: 0;
+  padding: 0 12px;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 41px;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.hero-coral p {
+  margin: 0;
+  padding: 0 12px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #fff;
+}
+
+/* text-only fallback (no image cell) */
+.hero-coral.no-image > div:first-child {
+  display: none;
+}
+
 @media (width >= 900px) {
   .hero-coral {
-    padding: 40px 32px;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 480px;
+  }
+
+  /* text panel left, image right */
+  .hero-coral > div:last-child {
+    order: 1;
+    flex: 0 0 49%;
+    max-width: 49%;
+  }
+
+  .hero-coral > div:first-child {
+    order: 2;
+    flex: 1 1 51%;
+    min-width: 0;
+  }
+
+  .hero-coral h1 {
+    font-size: var(--heading-font-size-xxl); /* 46px */
+    line-height: 68px;
+    letter-spacing: 0.62px;
+  }
+
+  .hero-coral p {
+    font-size: 18px;
+    line-height: 27px;
   }
 }

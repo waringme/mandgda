@@ -1,27 +1,83 @@
+/* cards-tools — 4-across grid of bordered tool/calculator cards (no images).
+   Values extracted from source computed styles (mandg.com "Need more help?"). */
+
 .cards-tools > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-template-columns: 1fr;
   gap: 24px;
 }
 
+@media (width >= 900px) {
+  .cards-tools > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card — warm cream fill with thin sand border, square corners. */
 .cards-tools > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(245 243 237);
+  border: 1px solid rgb(221 216 194);
+  border-radius: 0;
+  box-shadow: none;
 }
 
+/* Card body — content padding from source (.teaser-card__content 16px 24px).
+   Extra bottom padding replaces the source button-container's 24px bottom pad. */
 .cards-tools .cards-tools-card-body {
-  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0;
+  padding: 16px 24px 24px;
 }
 
-.cards-tools .cards-tools-card-image {
-  line-height: 0;
+/* Title (h5). */
+.cards-tools .cards-tools-card-body h5 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0.11px;
+  color: var(--text-color);
 }
 
-.cards-tools > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+/* CTA row — pushed to the bottom so links align across the grid.
+   Source: button-container margin-top 29px above the link. */
+.cards-tools .cards-tools-card-body p {
+  margin: 29px 0 0;
+  margin-top: auto;
+  padding-top: 29px;
+}
+
+/* CTA link — dark teal text with a green circle + white arrow icon. */
+.cards-tools .cards-tools-card-body p a:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgb(5 90 96);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.cards-tools .cards-tools-card-body p a:hover {
+  color: rgb(5 90 96);
+  text-decoration: underline;
+}
+
+.cards-tools .cards-tools-card-body p a:any-link::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%2300806a'/%3E%3Cpath d='M7 12h8M12.5 8l4 4-4 4' fill='none' stroke='%23fff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }

@@ -1,27 +1,85 @@
+/* cards-info — "More information" bordered cards on a grey section.
+   Values extracted from source computed styles (M&G teasercards). */
+
 .cards-info > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 16px;
+}
+
+@media (width >= 900px) {
+  .cards-info > ul {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .cards-info > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  background-color: #fff;
+  border: 1px solid #ddd8c2;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .cards-info .cards-info-card-body {
-  margin: 16px;
+  margin: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
-.cards-info .cards-info-card-image {
-  line-height: 0;
+/* Title */
+.cards-info .cards-info-card-body h5 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0.08px;
+  color: #2f2f2f;
 }
 
-.cards-info > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+/* Description */
+.cards-info .cards-info-card-body p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2f2f2f;
+}
+
+/* CTA — teal pill button. The authored link is a plain <p><a>, so opt it
+   into a button here (overrides the global inline-link reset). */
+.cards-info .cards-info-card-body p:last-child {
+  margin-top: 24px;
+}
+
+.cards-info .cards-info-card-body p:last-child a:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  background-color: #055a60;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.cards-info .cards-info-card-body p:last-child a:any-link::after {
+  content: "→";
+  font-weight: 500;
+}
+
+.cards-info .cards-info-card-body p:last-child a:hover,
+.cards-info .cards-info-card-body p:last-child a:focus-visible {
+  background-color: #033f44;
+  color: #fff;
+  text-decoration: none;
 }

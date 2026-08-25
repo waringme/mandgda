@@ -1,37 +1,36 @@
+/* tabs-burgundy — M&G "Your pension options" tabbed interface.
+   Values extracted from source computed styles (div.tabs.panelcontainer.burgundy). */
+
+/* --- tablist --- */
 .tabs-burgundy .tabs-burgundy-list {
   display: flex;
-  gap: 0.5ch;
-  max-width: 100%;
-  font-size: var(--body-font-size-xs);
-  overflow-x: auto;
-}
-
-@media (width >= 600px) {
-  .tabs-burgundy .tabs-burgundy-list {
-    font-size: var(--body-font-size-s);
-  }
-}
-
-@media (width >= 900px) {
-  .tabs-burgundy .tabs-burgundy-list {
-    font-size: var(--body-font-size-m);
-  }
-}
-
-.tabs-burgundy .tabs-burgundy-list button {
-  flex: 0 0 max-content;
+  flex-direction: column;
+  gap: 2px;
   margin: 0;
-  border: 1px solid #dadada;
+  padding: 0;
+  list-style: none;
+}
+
+/* --- tab button --- */
+.tabs-burgundy .tabs-burgundy-list button {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 16px;
+  border: 0;
   border-radius: 0;
-  padding: 0.5em;
-  background-color: var(--light-color);
-  color: initial;
-  font-weight: bold;
-  line-height: unset;
-  text-align: initial;
-  text-overflow: unset;
-  overflow: unset;
-  white-space: unset;
+  background-color: #810645;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.38px;
+  text-align: left;
+  white-space: normal;
+  cursor: pointer;
   transition: background-color 0.2s;
 }
 
@@ -39,20 +38,80 @@
   margin: 0;
 }
 
-
-.tabs-burgundy .tabs-burgundy-list button[aria-selected='true'] {
-  border-bottom: 1px solid var(--background-color);
-  background-color: var(--background-color);
-  cursor: initial;
+/* --- active tab --- */
+.tabs-burgundy .tabs-burgundy-list button[aria-selected="true"] {
+  background-color: #f5f3ed;
+  color: var(--text-color);
+  border-top: 4px solid #810645;
+  text-decoration: underline;
+  text-decoration-thickness: 2.7px;
+  text-underline-offset: 4px;
+  cursor: default;
 }
 
+/* --- tabpanel --- */
 .tabs-burgundy .tabs-burgundy-panel {
-  margin-top: -1px;
+  margin: 0;
   padding: 24px;
-  border: 1px solid #dadada;
-  overflow: auto;
+  background-color: #f5f3ed;
+  color: var(--text-color);
 }
 
-.tabs-burgundy .tabs-burgundy-panel[aria-hidden='true'] {
+.tabs-burgundy .tabs-burgundy-panel[aria-hidden="true"] {
   display: none;
+}
+
+.tabs-burgundy .tabs-burgundy-panel h5 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0.11px;
+  color: var(--text-color);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.tabs-burgundy .tabs-burgundy-panel p {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+/* --- CTA: standalone link rendered as teal outlined pill --- */
+.tabs-burgundy .tabs-burgundy-panel p > a:only-child {
+  display: inline-flex;
+  align-items: center;
+  margin: 8px 0 0;
+  padding: 14px 16px;
+  border: 2px solid #055a60;
+  border-radius: 100px;
+  background-color: transparent;
+  color: #055a60;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.tabs-burgundy .tabs-burgundy-panel p > a:only-child:hover {
+  background-color: #055a60;
+  color: #fff;
+}
+
+/* --- desktop: horizontal equal-width tab bar --- */
+@media (width >= 900px) {
+  .tabs-burgundy .tabs-burgundy-list {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .tabs-burgundy .tabs-burgundy-list button {
+    justify-content: center;
+    text-align: start;
+  }
+
+  .tabs-burgundy .tabs-burgundy-panel {
+    padding: 24px;
+  }
 }

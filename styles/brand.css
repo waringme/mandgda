@@ -1,0 +1,40 @@
+/*
+ * brand.css — M&G brand design tokens
+ * Extracted from https://www.mandg.com (Infra typeface, brand colors, spacing).
+ */
+
+/* M&G uses the proprietary "Infra" typeface, self-hosted on mandg.com but
+   served without cross-origin (CORS) headers, so it cannot be loaded here.
+   We use a clean humanist/geometric sans-serif system stack as the closest
+   freely available substitute. */
+
+:root {
+  /* fonts */
+  --heading-font-family: -apple-system, "Segoe UI", roboto, helvetica, arial, sans-serif;
+  --body-font-family: -apple-system, "Segoe UI", roboto, helvetica, arial, sans-serif;
+
+  /* brand colors */
+  --background-color: #fff;
+  --text-color: #2f2f2f;
+  --link-color: #2f2f2f;
+  --link-hover-color: #6c1d45;
+
+  /* M&G brand accents */
+  --mandg-coral: #ff6b57;
+  --mandg-burgundy: #6c1d45;
+  --mandg-magenta: #a01441;
+  --mandg-green: #00806a;
+  --mandg-grey: #f5f5f5;
+
+  /* spacing */
+  --nav-height: 84px;
+  --section-padding: 48px;
+
+  /* heading sizes (desktop) */
+  --heading-font-size-xxl: 46px;
+  --heading-font-size-xl: 38px;
+  --heading-font-size-l: 32px;
+  --heading-font-size-m: 24px;
+  --heading-font-size-s: 24px;
+  --heading-font-size-xs: 16px;
+}
