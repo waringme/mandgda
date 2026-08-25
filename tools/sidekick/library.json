@@ -5,47 +5,47 @@
   "data": [
     {
       "name": "Cards",
-      "path": "/block-library/cards"
+      "path": "https://main--mandgda--waringme.aem.live/block-library/cards"
     },
     {
       "name": "Columns",
-      "path": "/block-library/columns"
+      "path": "https://main--mandgda--waringme.aem.live/block-library/columns"
     },
     {
       "name": "Hero",
-      "path": "/block-library/hero"
+      "path": "https://main--mandgda--waringme.aem.live/block-library/hero"
     },
     {
       "name": "Tabs",
-      "path": "/block-library/tabs"
+      "path": "https://main--mandgda--waringme.aem.live/block-library/tabs"
     },
     {
       "name": "Widget",
-      "path": "/block-library/widget"
+      "path": "https://main--mandgda--waringme.aem.live/block-library/widget"
     },
     {
       "name": "Hero (Coral)",
-      "path": "/block-library/hero-coral"
+      "path": "https://main--mandgda--waringme.aem.live/block-library/hero-coral"
     },
     {
       "name": "Hero (Dark)",
-      "path": "/block-library/hero-dark"
+      "path": "https://main--mandgda--waringme.aem.live/block-library/hero-dark"
     },
     {
       "name": "Tabs (Burgundy)",
-      "path": "/block-library/tabs-burgundy"
+      "path": "https://main--mandgda--waringme.aem.live/block-library/tabs-burgundy"
     },
     {
       "name": "Cards (Link list)",
-      "path": "/block-library/cards-linklist"
+      "path": "https://main--mandgda--waringme.aem.live/block-library/cards-linklist"
     },
     {
       "name": "Cards (Tools)",
-      "path": "/block-library/cards-tools"
+      "path": "https://main--mandgda--waringme.aem.live/block-library/cards-tools"
     },
     {
       "name": "Cards (Info)",
-      "path": "/block-library/cards-info"
+      "path": "https://main--mandgda--waringme.aem.live/block-library/cards-info"
     }
   ],
   "columns": [

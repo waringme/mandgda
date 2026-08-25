@@ -136,8 +136,11 @@ for (const b of blocks) {
   fs.writeFileSync(path.join(DOCS, `${b.slug}.html`), doc(b.body, b.title, b.description));
 }
 
-// library.json sheet — one row per block: name + path to its doc
-const data = blocks.map((b) => ({ name: b.title, path: `/block-library/${b.slug}` }));
+// library.json sheet — one row per block: name + ABSOLUTE path to its doc.
+// DA's library (getItemDetails) does `new URL(item.path)`, so path must be a
+// full AEM URL — a relative path throws "Failed to construct 'URL'".
+const HOST = 'https://main--mandgda--waringme.aem.live';
+const data = blocks.map((b) => ({ name: b.title, path: `${HOST}/block-library/${b.slug}` }));
 const library = {
   total: data.length,
   offset: 0,
