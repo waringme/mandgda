@@ -62,14 +62,10 @@ footer .footer .section:nth-child(2) p {
   break-after: avoid;
 }
 
-/* start each heading (except the first) on a fresh column */
+/* start each heading (except the first) on a fresh column; no top margin so
+   all column headings share the same baseline at the top of the row */
 footer .footer .section:nth-child(2) p:not(:first-child) {
   break-before: column;
-  margin-top: 28px;
-}
-
-footer .footer .section:nth-child(2) p:first-child {
-  margin-top: 0;
 }
 
 footer .footer .section:nth-child(2) ul {
