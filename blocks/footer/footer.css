@@ -38,29 +38,45 @@ footer .footer .section:nth-child(1) img {
   height: 50px;
 }
 
-/* Section 2: link columns — 2-up on small screens, 4-up from tablet width so
-   the columns read horizontally rather than one tall stack. */
+/* Section 2: link columns. The authored content is a FLAT sequence of
+   heading (<p>) + list (<ul>) pairs — DA collapses wrapper <div>s, so a
+   grid can't be used. CSS multi-column flows the flat run into columns;
+   each heading starts a new column and stays with its list. */
 footer .footer .section:nth-child(2) {
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px 24px 40px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px 24px;
+}
+
+footer .footer .section:nth-child(2) .default-content-wrapper {
+  column-count: 2;
+  column-gap: 24px;
 }
 
 /* Column heading — white, regular weight (matches source) */
 footer .footer .section:nth-child(2) p {
-  margin-bottom: 12px;
+  margin: 0 0 12px;
   font-size: 16px;
   font-weight: 400;
   color: #fff;
+  break-after: avoid;
+}
+
+/* start each heading (except the first) on a fresh column */
+footer .footer .section:nth-child(2) p:not(:first-child) {
+  break-before: column;
+  margin-top: 28px;
+}
+
+footer .footer .section:nth-child(2) p:first-child {
+  margin-top: 0;
 }
 
 footer .footer .section:nth-child(2) ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  break-inside: avoid;
 }
 
 footer .footer .section:nth-child(2) li {
@@ -110,8 +126,8 @@ footer .footer .section:nth-child(3) p {
 }
 
 @media (width >= 600px) {
-  footer .footer .section:nth-child(2) {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+  footer .footer .section:nth-child(2) .default-content-wrapper {
+    column-count: 4;
+    column-gap: 40px;
   }
 }
